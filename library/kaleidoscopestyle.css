@@ -1,0 +1,123 @@
+html, body {
+    width: 100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #fffef5;
+    overflow:hidden;
+    transform:translateZ(1);
+
+}
+.kaleidoscope-wrapper{
+    display: block;
+    width:1400px;
+    height:1400px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%)
+    
+}
+
+.kaleidoscope {
+    display: block;
+    width: 100%;
+    height:100%;
+    position: relative;
+    transform-origin: center center;
+    animation: spin 60s infinite linear;
+}
+
+
+.slice{
+    position:absolute;
+    width: 142%;
+    height: 142%;
+    top: -21%;
+    left:-21%;
+    transform-origin:center center;
+    background:url(kaleidoscope5.jpg);
+    background-repeat:repeat;
+    background-size: 55%;
+    background-position: center;
+    
+
+    clip-path: polygon(50% 50%, 29.3% 100%, 0 100%);
+
+    animation:moveBackground 60s infinite alternate ease-in-out;
+
+}
+
+
+
+.slice:nth-child(1) {transform: rotate(0deg);}
+.slice:nth-child(2) {transform: rotate(45deg) scaleX(-1);}
+.slice:nth-child(3) {transform: rotate(45deg);}
+.slice:nth-child(4) {transform: rotate(90deg) scaleX(-1);}
+.slice:nth-child(5) {transform: rotate(90deg);}
+.slice:nth-child(6) {transform: rotate(135deg) scaleX(-1);}
+.slice:nth-child(7) {transform: rotate(135deg);}
+.slice:nth-child(8) {transform: rotate(180deg) scaleX(-1);}
+.slice:nth-child(9) {transform: rotate(180deg);}
+.slice:nth-child(10) {transform: rotate(225deg) scaleX(-1);}
+.slice:nth-child(11) {transform: rotate(225deg);}
+.slice:nth-child(12) {transform: rotate(270deg) scaleX(-1);}
+.slice:nth-child(13) {transform: rotate(270deg);}
+.slice:nth-child(14) {transform: rotate(315deg) scaleX(-1);}
+.slice:nth-child(15) {transform: rotate(315deg);}
+.slice:nth-child(16) {transform: rotate(0deg) scaleX(-1);}
+
+
+
+@keyframes moveBackground {
+    0%{
+        background-position:top left;
+        /*background-size: 25%;*/
+    }
+    50%{
+        background-position: center center;
+        /*background-size:50%;*/
+    }  
+     100% {
+        background-position:bottom right;
+        /*background-size: 25%*/}
+
+    }
+
+@keyframes spin {
+    from{
+        transform: rotate (0deg);
+    }
+    to {
+        transform: rotate (360deg);
+    }
+    }
+
+   
+    .removeButton {
+        cursor: pointer;
+        position: fixed; /* Fix it to the top-right corner of the screen */
+        top: 15px;
+        right: 30px;
+        width: 50px;
+        height: auto;
+        z-index: 9999; /* Ensure it is above all other elements */
+        transition-duration: 0.4s;
+    }
+  
+    .removeButton:hover {
+      content: url('closebutton2contrast.png');
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      width: 50px;
+      height: auto;
+      cursor: pointer;
+      z-index: 2;
+    }
+    
+    
+   

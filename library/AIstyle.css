@@ -1,0 +1,79 @@
+
+body {
+    background-color: #fffef5;
+    margin: 0;
+    padding: 0;
+  
+  }
+
+.image {
+  position: absolute;
+  top: 50px ;
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: block;
+  width: 700px; 
+  height: auto; 
+  }
+
+  .removeButton {
+    position:absolute;
+    top: 15px;
+    right: 30px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+    transform: none; 
+    transition-duration: 0.4s;
+  }
+
+  .removeButton:hover {
+    content: url('closebutton.png');
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+
+
+  .generate {
+    display: flex;
+    width: 70%;
+    position: absolute;
+    left:200px;
+    bottom: 10px;
+    border: 5px solid #72c6a5; /* Darker border for contrast */
+    border-radius: 8px; /* Rounded corners */
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+
+  }
+  .generate > input {
+    flex: 1;
+  }
+
+  .prompt:focus {
+    border-color: #ff6600; /* Highlight color */
+}
+
+.create:hover {
+  background-color: #e16350; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+.loader {
+  border-top: 16px solid #1b2982;
+  border-right: 16px solid #72c6a5;
+  border-bottom: 16px solid #e16350;
+  border-left: 16px solid #f9d537;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

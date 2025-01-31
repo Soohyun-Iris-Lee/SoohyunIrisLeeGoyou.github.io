@@ -1,0 +1,64 @@
+.hangul {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: auto;
+  z-index: 0;
+}
+.hangul.small {
+  position: absolute;
+  top: 50px;
+  width: 40%;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+body {
+  background-color: #fffef5;
+}
+
+.save-btn {
+  position: absolute;
+  right:20px;
+  bottom: 20px;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: white;
+  z-index: 2;
+}
+
+.removeButton {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
+  transition-duration: 0.4s;
+}
+.removeButton:hover {
+  content: url('closebutton.png');
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
